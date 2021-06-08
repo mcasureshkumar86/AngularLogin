@@ -1,0 +1,31 @@
+<div class="center-item">
+    <form [formGroup]="accountForm" (ngSubmit)="onsubmitAccountFrom()">
+        <div class="form-group">
+            <input type="text" placeholder="Enter Email" class="formControlName" formControlName="email">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter Name" class="formControlName" formControlName="name">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter Account Number" class="formControlName"
+                formControlName="accountNumber">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Enter Routing Number" class="formControlName"
+                formControlName="routingNumber">
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="Enter Last 4 Digit SSN" class="formControlName" formControlName="ssn">
+        </div>
+        <div  class="form-group">
+            <input id="male" type="radio" value="male" name="gender" class="formControlName" formControlName="gender">
+            <label for="male">Male</label>
+        </div>
+        <div  class="form-group">
+            <input id="female" type="radio" value="female" name="gender" class="formControlName" formControlName="gender">
+            <label for="female">Female</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!accountForm.valid">Save</button>
+    </form>
+</div>

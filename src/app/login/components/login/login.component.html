@@ -1,0 +1,12 @@
+<div class="center-item">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitMyform()">
+    <div class="form-group">
+        <input type="email" [(ngModel)]="email" placeholder="Enter Email Address" class="formControlName" formControlName="email" />
+    </div>
+    <div class="form-group">
+        <input type="password" [(ngModel)]="mypassword" class="formControlName" formControlName="password"  placeholder="Enter password" />
+    </div>
+        <button type="submit" class="btn btn-primary"   [disabled]="!loginForm.valid">Login</button>
+        <p>Not Registered ?<a href="#">Create account Now!</a> </p>
+    </form>
+</div> 
